@@ -1,12 +1,11 @@
 extends layouts/main
 
 block content
+  figure.logo
+    img.picture(src="images/profile-image.jpg")
+    figcaption.text
+      | Cheila de Barros
 
-  div#home
-    | aqui vai o logo e o slideshow
-
-  div#about
-    | aqui vai o texto sobre
-
-  div#work
-    | aqui vão os trabalhos
+  include layouts/home
+  include layouts/about
+  include layouts/work

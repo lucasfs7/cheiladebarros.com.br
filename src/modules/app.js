@@ -1,15 +1,8 @@
-import request from 'browser-request'
+import logo from './logo'
 
-const msg = 'this is a modular script compiled with browserify and babel returning an ajax request as example:'
+document.addEventListener('DOMContentLoaded', start)
+if (document.readyState === "complete") start()
 
-const opts = {
-  method: 'GET',
-  url: '/images/example-jpg.jpg'
+function start() {
+  logo()
 }
-
-const responseCallback = (err, response, body) => {
-  if (err) return console.log(err)
-  console.log(msg, response)
-}
-
-request(opts, responseCallback)
