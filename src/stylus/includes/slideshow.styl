@@ -1,0 +1,32 @@
+slides = 10
+time-per-slide = 10
+total-animation-time = time-per-slide * slides
+
+.slideshow
+  width 100%
+  height 100vh
+  overflow hidden
+  position relative
+
+  .photo
+    background-position center
+    background-size cover
+    width 100%
+    height 100vh
+    display block
+    margin 0
+    position absolute
+    top 0
+    left 0
+    animation round (total-animation-time)s infinite
+    opacity 0
+
+    for i in 1..slides
+      &:nth-child({i})
+        animation-delay (total-animation-time - time-per-slide * i)s
+
+@keyframes round
+  15%
+    opacity 1
+  20%
+    opacity 0

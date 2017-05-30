@@ -1,1 +1,18 @@
+-
+  var images = [
+    'images/slide-10.jpg',
+    'images/slide-9.jpg',
+    'images/slide-8.jpg',
+    'images/slide-7.jpg',
+    'images/slide-6.jpg',
+    'images/slide-5.jpg',
+    'images/slide-4.jpg',
+    'images/slide-3.jpg',
+    'images/slide-2.jpg',
+    'images/slide-1.jpg'
+  ]
+
 div#home
+  .slideshow
+    each image in images
+      .photo(style="background-image: url(#{image})")
